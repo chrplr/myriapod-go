@@ -1,5 +1,7 @@
 # Myriapod — Go port
 
+**▶ Play it in your browser: <https://chrplr.github.io/myriapod-go/>**
+
 A Go re-implementation of the Pygame Zero game **Myriapod** from *Code the Classics
 Volume 1* (Raspberry Pi Press), built on
 [go-sdl3](https://github.com/Zyko0/go-sdl3) and the
