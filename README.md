@@ -1,5 +1,7 @@
 # Myriapod — Go port
 
+[![Latest release](https://img.shields.io/github/v/release/chrplr/myriapod-go)](https://github.com/chrplr/myriapod-go/releases/latest)
+
 **▶ Play it in your browser: <https://chrplr.github.io/myriapod-go/>**
 
 A Go re-implementation of the Pygame Zero game **Myriapod** from *Code the Classics
