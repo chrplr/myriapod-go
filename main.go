@@ -67,9 +67,10 @@ var (
 	audio  *Audio
 )
 
-// spacePressed reports a fresh press of the space bar (down now, up last frame).
+// spacePressed reports a fresh press of a start key — Space or Enter — (down
+// now, up last frame).
 func spacePressed() bool {
-	if keyDown_space() {
+	if keyDown_space() || keyDown_enter() {
 		if spaceDown {
 			return false
 		}

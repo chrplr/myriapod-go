@@ -10,3 +10,4 @@ func keyDown_right() bool { return keyDown(sdl.SCANCODE_RIGHT) }
 func keyDown_up() bool    { return keyDown(sdl.SCANCODE_UP) }
 func keyDown_down() bool  { return keyDown(sdl.SCANCODE_DOWN) }
 func keyDown_space() bool { return keyDown(sdl.SCANCODE_SPACE) }
+func keyDown_enter() bool { return keyDown(sdl.SCANCODE_RETURN) || keyDown(sdl.SCANCODE_KP_ENTER) }
