@@ -12,8 +12,18 @@ Volume 1* (Raspberry Pi Press), built on
 [pgzgo](https://github.com/chrplr/pgzgo) harness.
 
 All images, sounds and music are embedded, so `go build` produces a single
-self-contained binary that needs no asset files at run time. Keyboard and gamepad
-are both supported.
+self-contained binary that needs no asset files at run time.
+
+## Controls
+
+Keyboard only.
+
+| Action | Key |
+|--------|-----|
+| Move   | Arrow keys |
+| Fire   | Space (the gun also fires while you move) |
+| Start  | Space / Enter |
+| Quit   | Esc |
 
 ## Download
 
