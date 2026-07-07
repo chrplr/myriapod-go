@@ -27,6 +27,16 @@ The picture below shows which key each action uses. They're all arrow keys, `Spa
 
 ![Keyboard controls for Myriapod](keyboard.svg)
 
+## How to play
+
+**The goal.** It's a Centipede-style shooter. A long, many-segmented **myriapod** winds its way down the screen toward you through a field of rocks. Shoot it to pieces before it reaches you, then survive the next wave — and the next.
+
+**Splitting the myriapod.** Every segment you hit is destroyed, breaking the creature into shorter chains that keep crawling. Clear every last segment to end the wave; each new wave is faster and longer.
+
+**The battlefield.** **Rocks** litter the arena — they block both your shots and the myriapod's path (the creature drops down a row whenever it hits one), and some rocks can be shot away to open lanes. Keep an eye out for **flying enemies** that swoop across and drop in extra rocks.
+
+**Surviving.** You move around the bottom of the screen and your gun fires with **Space** (it keeps firing while you move, so you can shoot on the run). Getting touched by the myriapod or a flier costs one of your **3 lives** — lose them all and it's game over.
+
 ## Download
 
 Prebuilt, self-contained binaries — no install, no dependencies, assets embedded.
