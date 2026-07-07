@@ -27,8 +27,8 @@ Python is a single 911-line module. The Go port splits it by entity:
 | `FlyingEnemy` | `flyingenemy.go` |
 | `Explosion` | `explosion.go` |
 | `Actor` behaviour / anchors / collision | `sprite.go` |
-| image cache | `assets.go` |
-| `play_sound` / music | `audio.go` |
+| image cache | pgzgo `Screen` (harness) |
+| `play_sound` / music | pgzgo `Audio` (harness) |
 | keyboard reading | `input.go` |
 
 ---
@@ -265,11 +265,10 @@ rotation, so the right-hand side uses the pre-update `offsetX`/`offsetY`.
   package-level `spaceDown`.
 - **Optional player** (`self.player = None` on the menu/attract demo) → `*Player`
   nil; `play_sound` and various branches gate on `g.player != nil`.
-- **Input**: Python's `keyboard.left` etc. → a per-frame `sdl.GetKeyboardState()`
-  snapshot with `keyDown_left()`-style wrappers.
+- **Input**: Python's `keyboard.left` etc. → pgzgo's `app.Keyboard.Held(sc)` snapshot, wrapped by `keyDown_left()`-style helpers.
 - **Sound/music**: `getattr(sounds, name+idx).play()` → preloaded
   `map[string]*mixer.Audio` + `PlayAudio`; `music.play("theme")` → a looping track.
-- **Loop**: `pgzrun.go()` → explicit `sdl.RunLoop` capped near 60 FPS. As in the
+- **Loop**: `pgzrun.go()` → pgzgo's `app.Loop`, a fixed-step, FPS-capped loop. As in the
   original, game time (not real time) drives everything, and it advances at double
   rate every fourth wave (`g.time += 2`).
 
@@ -301,7 +300,7 @@ rotation, so the right-hand side uses the pre-update `offsetX`/`offsetY`.
 | Integer maths | `//`, `%` → `floorDiv`, `pmod` | Go truncates toward zero |
 | Conversions | `str(int(bool))`, `score[-i]` → `b2s`, `score[len-i]` | no bool→int/neg-index |
 | Optional player | `None` → `*Player` nil | no `None` |
-| Framework | Pygame Zero → go-sdl3 | library swap |
+| Framework | Pygame Zero → pgzgo (over go-sdl3) | library swap |
 
 The grid rules, segment AI, wave design, and all the movement/rotation maths are
 line-by-line equivalent to `myriapod.py`. The two most interesting translations —
