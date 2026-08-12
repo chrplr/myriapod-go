@@ -64,7 +64,12 @@ design and original assets are © their respective authors / Raspberry Pi Press.
 
 The original Python code and assets are in Raspberry Pi Press's [Code the Classics — Volume 1](https://github.com/raspberrypipress/Code-the-Classics-Vol1) repository.
 
-The Go source code of this port is distributed under the MIT License.
+Copyright (C) 2026 Christophe Pallier.
+
+The Go source code of this port is licensed under the [Apache License, Version 2.0](LICENSE)
+(`SPDX-License-Identifier: Apache-2.0`). That licence covers the Go source only —
+the game design and original assets remain © their respective authors /
+Raspberry Pi Press.
 
 See `Python_and_Go_implementation_comparison.md` for a walkthrough of how the port
 maps onto the original.

@@ -1,3 +1,7 @@
+// Copyright (C) 2026 Christophe Pallier
+//
+// SPDX-License-Identifier: Apache-2.0
+
 package main
 
 // Sprite is a positioned image with a Pygame-Zero-style anchor. By default the
